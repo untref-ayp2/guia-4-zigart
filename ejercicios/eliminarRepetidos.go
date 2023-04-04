@@ -10,11 +10,7 @@ comparables y elimine los repetidos.
 */
 func EliminarRepetidos[T comparable](arreglo []T) []T {
 
-	conjunto := set.NewSet[T]()
-
-	for _, value := range arreglo {
-		conjunto.Add(value)
-	}
+	conjunto := set.NewSet(arreglo...)
 
 	return conjunto.Values()
 
