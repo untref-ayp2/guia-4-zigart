@@ -15,7 +15,7 @@ Completar los ejercicios en el archivo ejercicios.go
 func Letras(s string) *set.Set[string]
 ```
 
-> Recuerden que al recorrer una cadena deben castear cada valor a string ya que GO representa los caracteres como enteros. No se deben incluir los blancos en el conjunto. Por lo tanto se recomienda usar `github.com/agrison/go-commons-lang/stringUtils` para chequear si un caracter es un blanco (espacio, tabulador, salto de línea, etc.)
+> Recuerden que al recorrer una cadena deben castear cada valor a string ya que GO representa los caracteres como enteros. No se deben incluir los blancos en el conjunto. Por lo tanto se recomienda usar `https://github.com/agrison/go-commons-lang/tree/master/stringUtils` para chequear si un caracter es un blanco (espacio, tabulador, salto de línea, etc.)
 
 2. Escribir una función que reciba un arreglo de elementos comparables y elimine los repetidos.
 

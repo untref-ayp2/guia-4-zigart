@@ -75,7 +75,7 @@ func NewSet[T comparable](elementos ...T) *Set[T] {
 }
 
 // Union devuelve un nuevo conjunto con la unión de los conjuntos recibidos
-// O(n*m), donde n y m son los tamaños de los conjuntos s1 y s2 respectivamente
+// O(n**2+m**2), donde n y m son los tamaños de los conjuntos s1 y s2 respectivamente
 func Union[T comparable](s1, s2 *Set[T]) *Set[T] {
 	result := NewSet[T]()
 	for i := 0; i < s1.Size(); i++ {
@@ -104,7 +104,7 @@ func Intersection[T comparable](s1, s2 *Set[T]) *Set[T] {
 // Difference devuelve un nuevo conjunto con la diferencia de los conjuntos
 // recibidos
 // La diferencia entre s1 y s2, son todos los elementos de s1 que no están en s2
-// O(n*m) donde n y m son los tamaños de los conjuntos s1 y s2 respectivamente
+// O(n*m+n**2) donde n y m son los tamaños de los conjuntos s1 y s2 respectivamente
 func Difference[T comparable](s1, s2 *Set[T]) *Set[T] {
 	result := NewSet[T]()
 	for i := 0; i < s1.Size(); i++ {
