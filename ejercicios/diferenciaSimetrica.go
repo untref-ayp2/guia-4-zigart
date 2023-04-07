@@ -5,13 +5,10 @@ import (
 )
 
 func DiferenciaSimetrica[T comparable](s1, s2 *set.Set[T]) *set.Set[T] {
-	result := set.NewSet[T]()
-	firstArray := s1.Values()
-	for _, value := range firstArray {
-		if s1.Contains(value) {
-			result.Add(value)
-		}
+	if s1 == nil && s2 != nil {
+		return s2
+	} else if s1 != nil && s2 == nil {
+		return s1
 	}
-
-	return result
+	return set.Union(set.Difference(s2, s1), set.Difference(s1, s2))
 }
